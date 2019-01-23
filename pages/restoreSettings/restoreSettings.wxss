@@ -1,0 +1,80 @@
+/* pages/restoreSettings/restoreSettings.wxss */
+.mycup-list{
+  margin-top: 20rpx;
+}
+.mycup-box{
+  position: relative;
+  margin-bottom: 48rpx;
+}
+.mycup-li{
+  width: 644rpx;
+  height: 284rpx;
+  border-radius: 12rpx;
+  margin: auto;
+  position: relative;
+  font-size: 32rpx;
+  color: #fff;
+}
+.back-view{
+  position: absolute;
+  width: 548rpx;
+  height: 242rpx;
+  top: 40rpx;
+  left: 50%;
+  margin-left: -274rpx;
+  z-index: -1;
+}
+.mycup-img{
+  height: 258rpx;
+  width: 184rpx;
+  position: absolute;
+  top: 18rpx;
+  left: 44rpx;
+  z-index: 5
+}
+.mycup-img > image {
+  width: 100%;
+  height: 100%;
+}
+.mycupshadow-img{
+  height: 224rpx;
+  width: 168rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 30rpx;
+  z-index: 3
+}
+.mycupshadow-img > image {
+  width: 100%;
+  height: 100%;
+}
+.cup-Numbering{
+  position: absolute;
+  z-index: 6;
+  top: 22rpx;
+  right: 26rpx;
+}
+.cup-name{
+  position: absolute;
+  z-index: 6;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.setting-but::after{
+  border: none;
+}
+.setting-but{
+  background: #63BDFF;
+  font-size: 36rpx;
+  width: 356rpx;
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+  position: absolute;
+  bottom: 110rpx;
+  left: 50%;
+  margin-left: -178rpx;
+  border-radius: 38rpx;
+  color: #fff;
+  box-shadow: 5rpx 2rpx 5rpx #63BDFF;
+}

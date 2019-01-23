@@ -1,0 +1,100 @@
+/* pages/personal/personal.wxss */
+.personal-box{
+  width: 664rpx;
+  height: 332rpx;
+  background: #63BDFF;
+  border-radius: 12rpx;
+  margin: auto;
+  position: relative;
+  z-index: 2
+}
+.personal-infor{
+  display: flex;
+  height: 148rpx;
+  padding: 36rpx 0 36rpx 38rpx;
+}
+.personal-avatar{
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff
+}
+image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.personal-right{
+  margin-left: 22rpx
+}
+.personal-name{
+  font-size: 54rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+.personal-gender{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 24rpx;
+}
+.personal-gender > image {
+  width: 100%;
+  height: 100%;
+}
+.personal-data{
+  display: flex;
+  color: #fff;
+  font-size: 32rpx
+}
+.infor-flex{
+  flex: 1;
+  text-align: center
+}
+.infor-flex-text{
+  font-size: 30rpx
+}
+.personal-list{
+  margin-top: 44rpx
+}
+.personal-li{
+  display: flex;
+  height: 86rpx;
+  align-items: center;
+}
+.personal-li-icon{
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 44rpx;
+  margin-right: 40rpx
+}
+.personal-li-icon > image {
+  width: 100%;
+  height: 100%
+}
+.personal-li-more{
+  width: 14rpx;
+  height: 18rpx;
+  position: absolute;
+  right: 40rpx
+}
+.personal-li-text{
+  font-size: 32rpx;
+  font-weight: normal;
+  font-family: PingFangSC;
+}
+.personal-li-more > image{
+  width: 100%;
+  height: 100%;
+  display:block;
+}
+.back-view{
+  position: absolute;
+  width: 580rpx;
+  height: 290rpx;
+  top: 40rpx;
+  left: 50%;
+  margin-left: -290rpx;
+  z-index: -1;
+  box-shadow: 10rpx 2rpx 50rpx #63BDFF;
+}

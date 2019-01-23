@@ -1,0 +1,26 @@
+<!--pages/friend_Requests/friend_Requests.wxml-->
+<view class='main'>
+  <view class='friend-list'>
+    <block wx:for-items="{{friend_list}}" wx:key=""> 
+      <view class='friend-box' bindtap='current_Operating'>
+        <view class='friend-li'>
+          <view class='friend-li-avatar'><image src='{{item.url}}'></image></view>
+          <view class='friend-right'>
+            <view class='friend-name'>{{item.nickname}}</view>
+            <view class='friend-gender' wx-if='{{item.sex == 1}}'><image src='../../image/boy.png'></image></view>
+            <view class='friend-gender' wx-if='{{item.sex == 0}}'><image src='../../image/girl.png'></image></view>
+          </view>
+          <view class='friend-but-box'>
+            <button class='friend-but' data-id='{{item.id}}' data-name='0' bindtap='Agree_Refuse_But'>同意</button>
+            <button class='friend-but' data-id='{{item.id}}' data-name='1' bindtap='Agree_Refuse_But'>拒绝</button>
+          </view>
+        </view>
+        <view class='back-view'></view>
+      </view>
+    </block>
+  </view>
+  <!-- <view class='friend-butBox' wx-if='{{but_show}}'>
+    <button class='friend-but friend-butleft'>拒绝</button>
+    <button class='friend-but'>添加到通讯录</button>
+  </view> -->
+</view>

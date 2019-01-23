@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "饮水历史",
+  "usingComponents": {
+    "calendar": "plugin://calendar/calendar"
+  }
+}

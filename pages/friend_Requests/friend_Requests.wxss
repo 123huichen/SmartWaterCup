@@ -1,0 +1,82 @@
+/* pages/friend_Requests/friend_Requests.wxss */
+.friend-box{
+  position: relative;
+  height:244rpx;
+  margin-bottom: 40rpx;
+} 
+.friend-li{
+  position: absolute;
+  width: 662rpx;
+  height: 244rpx;
+  background: #63BDFF;
+  font-size: 56rpx;
+  border-radius: 12rpx;
+  left: 50%;
+  margin-left: -331rpx;
+  display: flex;
+  color: #fff
+}
+.back-view{
+  position: absolute;
+  width: 630rpx;
+  height: 232rpx;
+  top: 10rpx;
+  left: 50%;
+  margin-left: -315rpx;
+  z-index: -1;
+  box-shadow: 0rpx 2rpx 20rpx #63BDFF;
+}
+.friend-li-avatar{
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 48rpx;
+  margin-left: 26rpx;
+}
+.friend-li-avatar > image {
+  width: 100%;
+  height: 100%;
+}
+.friend-right{
+  margin-left: 16rpx;
+  margin-top: 48rpx;
+}
+.friend-gender{
+  width: 40rpx;
+  height: 40rpx;
+}
+.friend-gender > image {
+  width: 100%;
+  height: 100%;
+}
+.friend-butBox{
+  display: flex;
+  position: fixed;
+  bottom: 110rpx;
+  width: 100%
+}
+.friend-but-box{
+  top:50rpx;
+  position: absolute;
+  right: 40rpx
+}
+.friend-but::after{
+  border: none
+}
+.friend-but{
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #fff;
+  color: #63BDFF;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 76rpx;
+  border: 1rpx solid #63BDFF; 
+  margin-bottom:28rpx;
+}
+.friend-butleft{
+  background: #fff;
+  color: #63BDFF
+}

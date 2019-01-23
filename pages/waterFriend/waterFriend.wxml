@@ -1,0 +1,25 @@
+<!--pages/waterFriend/waterFriend.wxml-->
+<view class='main'>
+  <view class='search-top'>
+    <view class='search-box'>
+      <input class='search-input' bindinput='search_input'></input>
+      <button class='search-but' bindtap='search'>搜索</button>
+    </view>
+  </view>
+  <!-- <view class='wx-add'>
+    <view class='wx-avatar'><image src='../../image/wx-icon.png'></image></view>
+    <text class='wx-add-text'>从微信中添加</text>
+    <view class='wx-add-icon'><image src='../../image/more-icon.png'></image></view>
+  </view> -->
+  <view class='friend-list'>
+    <view class='friend-title'>我的好友</view>
+    <view class='data-list'>
+      <block wx:for-items="{{li_avatar}}" wx:key=""> 
+        <view class='friend-li'>
+          <view class='friend-li-avatar'><image src='{{item.url}}'></image></view>
+          <view class='friend-name'>{{item.nickname}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

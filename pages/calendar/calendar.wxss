@@ -1,0 +1,7 @@
+/* pages/calendar/calendar.wxss */
+.calendar {
+  background-color:white; /*背景色为白色*/
+  padding-top: 10px;    /*上内边距为10px*/
+  color: #38ACFF;
+
+}

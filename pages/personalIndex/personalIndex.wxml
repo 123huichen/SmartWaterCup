@@ -1,0 +1,61 @@
+<!--pages/personal/personal.wxml-->
+<view class='main'>
+  <view class='personal-box'>
+    <view class='personal-infor'>
+      <view class='personal-avatar'><image src='{{personal_Avatar}}'></image></view>
+      <view class='personal-right'>
+        <view class='personal-name'>{{personal_Name}}</view>
+        <view class='personal-gender' wx:if='{{sex == 2}}'>
+          <image class='' src='../../image/girl.png'></image>
+        </view>
+        <view class='personal-gender' wx:if='{{sex == 1}}'>
+          <image class='' src='../../image/boy.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='personal-data'>
+      <view class='infor-flex'>
+        <view class='infor-flex-text'>已使用</view>
+        <view>{{time}}天</view>
+      </view>
+      <view class='infor-flex'>
+        <view class='infor-flex-text'>已饮用</view>
+        <view>{{liter}}L</view>
+      </view>
+      <view class='infor-flex'>
+        <view class='infor-flex-text'>健康度</view>
+        <view>{{percent}}%</view>
+      </view>
+    </view>
+  </view>
+  <view class='back-view'></view>
+  <view class='personal-list'>
+    <view class='personal-li' bindtap='myData'>
+      <view class='personal-li-icon'><image src='../../image/material-icon.png'></image></view>
+      <view class='personal-li-text'>我的资料</view>
+      <view class='personal-li-more'><image src='../../image/more-icon.png'></image></view>
+    </view>
+    <view class='personal-li' bindtap='waterCupLocation'>
+      <view class='personal-li-icon'><image src='../../image/location-icon.png'></image></view>
+      <view class='personal-li-text'>水杯定位</view>
+      <view class='personal-li-more'><image src='../../image/more-icon.png'></image></view>
+    </view>
+    <view class='personal-li' bindtap='myWaterCup'>
+      <view class='personal-li-icon'><image src='../../image/water-cup-icon.png'></image></view>
+      <view class='personal-li-text'>我的水杯</view>
+      <view class='personal-li-more'><image src='../../image/more-icon.png'></image></view>
+    </view>
+    <view class='personal-li' bindtap='customer'>
+      <view class='personal-li-icon'><image src='../../image/customer-icon.png'></image></view>
+      <view class='personal-li-text'>客服与反馈</view>
+      <view class='personal-li-more'><image src='../../image/more-icon.png'></image></view>
+    </view>
+    <view class='personal-li' bindtap='setting'>
+      <view class='personal-li-icon'><image src='../../image/setting-icon.png'></image></view>
+      <view class='personal-li-text'>设置</view>
+      <view class='personal-li-more'><image src='../../image/more-icon.png'></image></view>
+    </view>
+  </view>
+</view>
+
+<button class='authorize' open-type="getUserInfo" bindgetuserinfo='agreeGetUser' wx:if="{{authorize}}"></button>

@@ -1,0 +1,52 @@
+<!--pages/waterCircleIndex/waterCircleIndex.wxml-->
+<view class='main' wx:if='{{If_UserInfo}}'>
+  <view class='main-float'>
+    <view class='water-friend-bg'>
+      <view class='water-friend'>
+        <text bindtap='water_Friend'>我的水友({{friendnum}})</text>
+        <view class='friend-num' bindtap='friend_Requests'>{{xiao_Xinum}}</view>
+      </view>
+      <view class='back-view'></view>
+    </view>
+  </view>
+  
+  <view class='friend-list'>
+    <view class='personal-box'>
+      <view class='infor-flex'>
+        <view class='infor-flex-text'>今日排名</view>
+        <view>{{ranking}}</view>
+      </view>
+      <view class='infor-flex'>
+        <view class='avatar'><image src='{{avatar}}'></image></view>
+        <text class='avatar-name'>{{myname}}</text>
+      </view>
+      <view class='infor-flex'>
+        <view class='infor-flex-text'>完成度</view>
+        <view>{{carryOut}}%</view>
+      </view>
+    </view>
+    <scroll-view scroll-y='true'>
+      <block wx:for-items="{{Ranking_list}}" wx:key=""> 
+        <view class='friend-li'>
+          <view class='ranking-num' wx:if="{{index == 0}}"><image src='../../image/gold-medal.png'></image></view>
+          <view class='ranking-num' wx:elif="{{index == 1}}"><image src='../../image/silver-medal.png'></image></view>
+          <view class='ranking-num' wx:elif="{{index == 2}}"><image src='../../image/bronze-medal.png'></image></view>
+          <view class='ranking-num' wx:elif="{{index > 2}}">{{index+1}}</view>
+          <view class='friend-li-avatar'><image src='{{item.url}}'></image></view>
+          <text class='friend-li-name'>{{item.nickname}}</text>
+          <text class='friend-li-carry'>{{item.completePlan}}%</text>
+          <form bindsubmit="Remind_But" report-submit='true' class='form-submit'>
+            <button class='friend-li-but' form-type="submit" data-friendUid='{{item.uid}}'>提醒</button>
+          </form>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<view class='zhanweifu-box' wx:if='{{!If_UserInfo}}'>
+  <view class='zhanweifu-img'>
+    <image src='../../image/zhanweifu.png'></image>
+  </view>
+  <view class='zhanweifu-text'>授权后可查看</view>
+</view>

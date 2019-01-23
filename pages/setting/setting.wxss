@@ -1,0 +1,41 @@
+/* pages/setting/setting.wxss */
+.main{
+  background:rgba(246,247,249,1);
+}
+.daily-title{
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #9B9B9B;
+  font-size: 28rpx;
+  padding: 0 44rpx;
+  background: rgba(246,247,249,1);
+}
+.daily-list{ 
+  background: #fff
+}
+.daily-li{
+  height: 84rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #4A4A4A;
+  font-size: 32rpx;
+  padding: 0 44rpx;
+}
+.wx-switch-input{width:72rpx !important;height:36rpx !important;}
+.wx-switch-input::before{width:72rpx !important;height: 36rpx !important;}
+.wx-switch-input::after{width: 32rpx !important;height: 32rpx !important;}
+
+.map-but{
+  width: 356rpx;
+  height: 76rpx;
+  border-radius: 76rpx;
+  background: #63BDFF;
+  box-shadow:0px 4px 8px rgba(99,189,255,0.45);
+  font-size: 36rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #ffffff;
+  margin: 40rpx auto;
+}

@@ -1,0 +1,164 @@
+/* pages/drinkingHistory/drinking_History.wxss */
+.history-wxcharts{
+  width: 100%;
+  height: 540rpx;
+}
+.history-top{
+  margin-bottom: 48rpx;
+}
+.chart-title{
+  display: flex;
+  font-size: 32rpx;
+  color: #4A4A4A;
+  margin-top: 36rpx;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 43rpx 50rpx 43rpx;
+}
+.h-t-r-t-but{
+  background: #63BDFF;
+  width: 120rpx;
+  height: 48rpx;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 24rpx;
+  text-align: center;
+  line-height: 48rpx;
+  box-shadow:0px 2px 4px rgba(99,189,255,0.42);
+  margin-left: 118rpx;
+  display: flex;
+  align-items: center;
+}
+.h-but-text{
+  margin-left: 26rpx;
+  margin-right: 12rpx;
+}
+image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.h-but-icon{
+  width: 10rpx;
+  height: 13rpx;
+}
+.history-box{
+  height: 162rpx;
+  display: flex;
+  margin: 0 43rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-cen{
+  width: 320rpx;
+  height: 162rpx;
+  overflow: hidden;
+  border-radius: 16rpx;
+  position: relative;
+  color: #FFFFFF;
+  font-size: 28rpx;
+}
+.flex-cenleft{
+  background: url('http://file.sitofang.top/img/td_drink_bk.png') no-repeat;
+  background-size: 100%
+}
+.flex-cenright{
+  background: url('http://file.sitofang.top/img/td_complate_bk.png') no-repeat;
+  background-size: 100% 
+}
+.flex-cenTeext{
+  position: absolute;
+  top: 30rpx;
+  left: 20rpx;
+}
+.flex-cenTeext1{
+  position: absolute;
+  top: 88rpx;
+  left: 98rpx;
+  font-size: 32rpx
+}
+.flex-cenTeext2{
+  position: absolute;
+  top: 86rpx;
+  left: 42rpx;
+  font-size: 32rpx
+}
+.canvar-box{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 46rpx;
+  right: 22rpx;
+}
+.canvar-main{
+  position: relative;
+}
+.canvar-bg{
+  position: absolute;
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 40rpx;
+  border: 14rpx solid rgba(255, 255, 255, 0.25);
+}
+.progress_canvas{
+  width: 80rpx;
+  height: 80rpx;
+}
+.drinking-habit{
+  margin-top: 8rpx;
+  background: #fff;
+  padding: 0 44rpx;
+}
+.drinking-habit-title{
+  color: #4A4A4A;
+  font-size: 32rpx;
+  padding-top: 28rpx;
+}
+.d-h-li{
+  height: 112rpx;
+  display: flex;
+  align-items: center;
+}
+.d-h-icon{
+  width: 80rpx;
+  height: 80rpx;
+  background: #63BDFF;
+  border-radius: 40rpx;
+  position: relative;
+  margin-right: 32rpx;
+}
+.d-h-img{
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -22rpx;
+  top: 50%;
+  margin-top: -22rpx;
+}
+.d-h-img1{
+  width: 32rpx;
+  height: 44rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -16rpx;
+  top: 50%;
+  margin-top: -22rpx;
+}
+.d-h-progress{
+  width: 424rpx;
+  height: 36rpx;
+  border-radius: 18rpx;
+  background: rgba(99, 189, 255, .1);
+  position: relative
+}
+.d-h-progress-new{
+  height: 36rpx;
+  border-radius: 18rpx;
+  background: linear-gradient(to right, #75EBFF , #76C8FF);
+}
+.d-h-num{
+  color: #FC6F6F;
+  font-size: 32rpx;
+  margin-left: 52rpx;
+}

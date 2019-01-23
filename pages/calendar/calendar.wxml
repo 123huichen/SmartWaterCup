@@ -1,0 +1,2 @@
+<!--pages/calendar/calendar.wxml-->
+<calendar  calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" />

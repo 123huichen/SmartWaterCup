@@ -1,0 +1,141 @@
+/* pages/findBluetooth/findBluetooth.wxss */
+.circle{
+  position:absolute;
+  left:0;
+  top:0;
+  right: 0; 
+  margin: 0 auto;
+  width:692rpx;
+  height:692rpx
+}
+.blue-c2, .blue-c3, .blue-c4, .blue-c5 {
+  position:absolute;
+  top:50%;
+  left:50%;
+  background:#fff;
+  width:692rpx;
+  height:692rpx;
+  margin-left:-346rpx;
+  margin-top:-346rpx;
+  opacity:1;
+  border-radius:692rpx;
+  animation: 1.2s linear infinite;
+}
+.blue-c1 {
+    width:388rpx;
+    height:388rpx;
+    position:absolute;
+    margin-left: 150rpx;
+    margin-top: 150rpx;
+    opacity:1;
+    border-radius:388rpx;
+    background: #63BDFF;
+    z-index: 99;
+}
+.blue-c1 > image {
+  width: 162rpx;
+  height: 206rpx;
+  margin-top: 80rpx;
+  margin-left: 114rpx
+}
+.blue-c2 {
+    animation-name:c2;                                                                                    
+    animation-delay:0.2s; 
+  
+}
+.blue-c3 {
+    animation-name:c2; 
+    animation-delay:0.4s;
+    
+}
+.blue-c4 {
+    animation-name:c2; 
+    animation-delay:0.6s;
+    
+}
+.blue-c5 {
+    animation-name:c2; 
+    animation-delay:1.2s;
+    
+}
+@keyframes c2 {
+  0% {
+      transform:scale(.222);
+      opacity:1;
+      background: #63BDFF;
+  }
+  50% {
+      transform:scale(.622);
+      opacity:.4;
+      background: #63BDFF;
+  }
+  98% {
+      transform:scale(1);
+      opacity:.2;
+      background: #63BDFF;
+  }
+  100% {
+      opacity:0;
+      background: #63BDFF;
+  }
+}
+.blue-but::after{
+  border: none;
+}
+.blue-but{
+  width: 318rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  position: absolute;
+  bottom: 110rpx;
+  left: 50%;
+  margin-left: -159rpx;
+  border-radius: 38rpx;
+  color: #fff;
+  background: #63BDFF;
+  font-size: 36rpx;
+}
+
+
+.main{
+  padding: 0rpx 44rpx;
+}
+.Bluetooth-li{
+  display: flex;
+  height: 132rpx;
+  align-items: center;
+}
+.bluetooth-icon{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  overflow: hidden
+}
+.bluetooth-icon > image{
+  width: 100%;
+  height: 100%;
+}
+.bluetooth-name{
+  color: #4A4A4A;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.bluetooth-lj{
+  position: absolute;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  background: #63BDFF;
+  right: 44rpx;
+}
+.bluetooth-lj-icon{
+  width: 22rpx;
+  height: 22rpx;
+  margin-left: 14rpx;
+}
+.bluetooth-lj-icon > image{
+  width: 100%;
+  height: 100%;
+  display:block;
+  margin-top:14rpx;
+}

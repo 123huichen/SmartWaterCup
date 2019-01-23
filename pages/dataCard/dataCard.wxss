@@ -1,0 +1,76 @@
+/* pages/dataCard/dataCard.wxss */
+.card-box{
+  position: relative;
+  width: 644rpx;
+  height: 786rpx;
+  background: #63BDFF;
+  left: 50%;
+  margin-left: -322rpx;
+  border-radius: 12rpx;
+  top: 180rpx
+}
+.card-avatar{
+  position: absolute;
+  width: 148rpx;
+  height: 148rpx;
+  border: 4rpx solid #63BDFF;
+  border-radius: 50%;
+  top: -78rpx;
+  left: 50%;
+  margin-left: -78rpx;
+  z-index: 1;
+  background: #fff;
+  overflow: hidden
+}
+image{
+  width: 100%;
+  height: 100%
+}
+.card-top{
+  padding-top: 134rpx
+}
+.card-input{
+  width: 418rpx;
+  height: 64rpx;
+  background: #fff;
+  margin: auto;
+  margin-bottom: 34rpx;
+  border-radius: 32rpx;
+  padding-left: 34rpx;
+  padding-right: 34rpx;
+  font-size: 28rpx;
+  color: #4A4A4A;
+}
+.card-but{
+  width: 356rpx;
+  height: 76rpx;
+  position: absolute;
+  bottom: 110rpx;
+  left: 50%;
+  margin-left: -178rpx;
+  border-radius: 38rpx;
+  line-height: 76rpx;
+  background: #63BDFF;
+  box-shadow:0px 4px 8px rgba(99,189,255,0.45);
+  color: #fff;
+  text-align: center;
+  font-size: 36rpx;
+}
+.card-input-code{
+  position: relative;
+  width: 486rpx;
+  margin: auto;
+}
+.card-input-post{
+  position: relative;
+}
+.card-code{
+  position: absolute;
+  right: 2rpx;
+  z-index: 99;
+  color: #63BDFF;
+  top: 0rpx;
+  font-size: 26rpx;
+  line-height: 66rpx;
+  padding:0 20rpx;
+}

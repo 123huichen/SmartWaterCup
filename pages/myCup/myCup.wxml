@@ -1,0 +1,14 @@
+<!--pages/myCup/myCup.wxml-->
+<view class='mycup-list'>
+  <block wx:for-items="{{mycup_list}}" wx:key="">
+    <view class='mycup-box' bindtap='restore_Settings' data-deviceNo='{{item.deviceNo}}' data-bluetoothName='{{item.bluetoothName}}' data-cupid='{{item.cupid}}' data-color='{{item.color}}'>
+      <view class='mycup-li' style='background:{{item.color}}'>
+        <view class='mycup-img'><image src='../../image/mycup-icon.png'></image></view>
+        <view class='mycupshadow-img'><image src='../../image/mycupshon-icon.png'></image></view>
+        <text class='cup-Numbering'>{{item.deviceNo}}</text>
+        <text class='cup-name'>{{item.bluetoothName}}</text>
+      </view> 
+      <view class='back-view' style='box-shadow:10rpx 2rpx 50rpx {{item.color}}'></view>
+    </view>
+  </block> 
+</view>

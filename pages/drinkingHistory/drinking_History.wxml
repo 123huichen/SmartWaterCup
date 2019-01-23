@@ -1,0 +1,64 @@
+<!--pages/drinkingHistory/drinking_History.wxml-->
+<view class='main'>
+  
+  <view class='history-top'>
+    <view class='chart-title'>
+      <view class=''>{{chart_title}}</view>
+      <view class='h-t-r-t-but' bindtap='drinkingHistory'>
+        <view class='h-but-text' bindtap='calendarpage'>历史</view>
+        <view class='h-but-icon'><image src='../../image/more-icon-w.png'></image></view>
+      </view>
+    </view>
+    <view class='history-wxcharts'>
+      <canvas canvas-id="pieCanvas" disable-scroll="true" class="pieCanvas" style="width:100%; height:240px;" bindtouchstart="touchHandler"></canvas>
+    </view>
+
+    <view class='history-box'>
+      <view class='flex-cen flex-cenleft'>
+        <text class='flex-cenTeext'>当日饮水</text>
+        <text class='flex-cenTeext1'>{{currentDrink}}ml</text>
+      </view>
+      <view class='flex-cen flex-cenright'>
+        <text class='flex-cenTeext'>完成计划</text>
+        <text class='flex-cenTeext2'>{{completePlan}}%</text>
+        <view class='canvar-box'>
+          <view class='canvar-main'>
+            <view class='canvar-bg'></view>
+            <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='drinking-habit'>
+    <view class='drinking-habit-title'>饮水习惯</view>
+    <view class='d-h-li'>
+      <view class='d-h-icon'><image class='d-h-img' src='../../image/tea-w.png'></image></view>
+      <view class='d-h-progress'>
+        <view class='d-h-progress-new' style='width:{{teawidth}}rpx;'></view>
+      </view>
+      <text class='d-h-num'>{{tea}}%</text>
+    </view>
+    <view class='d-h-li'>
+      <view class='d-h-icon'><image class='d-h-img' src='../../image/boilingwater-w.png'></image></view>
+      <view class='d-h-progress'>
+        <view class='d-h-progress-new' style='width:{{boilingWaterwidth}}rpx;'></view>
+      </view>
+      <text class='d-h-num'>{{boilingWater}}%</text>
+    </view>
+    <view class='d-h-li'>
+      <view class='d-h-icon'><image class='d-h-img' src='../../image/coffee-w.png'></image></view>
+      <view class='d-h-progress'>
+        <view class='d-h-progress-new' style='width:{{coffeewidth}}rpx;'></view>
+      </view>
+      <text class='d-h-num'>{{coffee}}%</text>
+    </view>
+    <view class='d-h-li'>
+      <view class='d-h-icon'><image class='d-h-img1' src='../../image/zidingyi-w.png'></image></view>
+      <view class='d-h-progress'>
+        <view class='d-h-progress-new' style='width:{{customwidth}}rpx;'></view>
+      </view>
+      <text class='d-h-num'>{{custom}}%</text>
+    </view>
+  </view>
+</view>

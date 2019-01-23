@@ -1,0 +1,34 @@
+/* pages/customer/customer.wxss */
+.customer-list{
+  padding: 0px 40rpx
+}
+.customer-li{
+  height: 80rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #4A4A4A
+}
+.customer-bot{
+  display: flex;
+  position: absolute;
+  bottom: 104rpx;
+  padding: 0 44rpx;
+}
+.customer-but{
+  width: 318rpx;
+  height: 78rpx;
+  border-radius: 78rpx;
+  border: 2rpx solid #63BDFF;
+  font-size: 36rpx;
+  line-height: 78rpx;
+  color: #63BDFF
+}
+.customer-but::after {
+  border: none;
+}
+.customer-but-right{
+  background: #63BDFF;
+  color: #fff;
+  margin-left: 26rpx
+}

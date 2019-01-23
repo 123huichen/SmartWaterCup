@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<view class="main">
+  <view class='top-nav'>
+    <block wx:for-items='{{currentList}}' wx:key="">
+      <view wx:if='{{item.type == "沸水"}}' class='{{currentData == 0 ? "top-navButSelected" : "top-navBut"}}' bindtap='checkCurrent'
+      data-info="0" data-type="{{item.type}}" data-temperatureStart='{{item.temperatureStart}}' data-temperatureEnd='{{item.temperatureEnd}}'>
+        <view class='top-navBut-icon'>
+          <image src='../../image/boilingwater-w.png' wx:if="{{currentData == 0}}"></image>
+          <image src='../../image/boilingwater.png' wx:else></image>
+        </view>
+        <text>沸水</text> 
+      </view>
+      <view wx:if='{{item.type == "茶"}}' class='{{currentData == 1 ? "top-navButSelected" : "top-navBut"}}' data-info="1" bindtap='checkCurrent' data-type="{{item.type}}" data-temperatureStart='{{item.temperatureStart}}' data-temperatureEnd='{{item.temperatureEnd}}'>
+        <view class='top-navBut-icon'>
+          <image src='../../image/tea-w.png' wx:if="{{currentData == 1}}"></image>
+          <image src='../../image/tea.png' wx:else></image>
+        </view>
+        <text>茶</text>
+      </view>
+      <view wx:if='{{item.type == "咖啡"}}' class='{{currentData == 2 ? "top-navButSelected" : "top-navBut"}}' data-info="2" bindtap='checkCurrent' data-type="{{item.type}}" data-temperatureStart='{{item.temperatureStart}}' data-temperatureEnd='{{item.temperatureEnd}}'>
+        <view class='top-navBut-icon'>
+          <image src='../../image/coffee-w.png' wx:if="{{currentData == 2}}"></image>
+          <image src='../../image/coffee.png' wx:else></image>      
+        </view>
+        <text>咖啡</text>
+      </view>
+      <view wx:if='{{item.type == "牛奶"}}' class='{{currentData == 3 ? "top-navButSelected" : "top-navBut"}}' data-info="3" bindtap='checkCurrent' data-type="{{item.type}}" data-temperatureStart='{{item.temperatureStart}}' data-temperatureEnd='{{item.temperatureEnd}}'>
+        <view class='top-navBut-icon'>
+          <image src='../../image/milk-w.png' wx:if="{{currentData == 3}}"></image> 
+          <image src='../../image/milk.png' wx:else></image> 
+        </view>
+        <text>牛奶</text>
+      </view>
+      <view wx:if='{{item.type == "自定义"}}' class='{{currentData == 4 ? "top-navButSelected" : "top-navBut"}}' data-info="4" bindtap='checkCurrent' data-type="{{item.type}}" data-temperatureStart='{{item.temperatureStart}}' data-temperatureEnd='{{item.temperatureEnd}}'>
+        <view class='top-navButzd-icon'>
+          <image src='../../image/zidingyi-w.png' wx:if="{{currentData == 4}}"></image>
+          <image src='../../image/zidingyi.png'  wx:else></image>
+        </view>
+        <text>自定义</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='main-box'>
+    <view class='center-title'>{{bluetooth_Name}}</view>
+    <view class='center-box'>
+      <view class='center-tow'>
+        <view class='center-anit' style='height:{{Height}}%;'></view>
+      </view>
+    </view>
+    <view class='center-text'>{{temperature}}℃</view>
+  </view>
+  <view class='temperature-box'>
+    <!-- <view class='t-b-center'>
+      <view class='t-b-bg'></view>
+      <view class='t-b-selected' style='width:{{selected_Width}}rpx'></view>
+      <view class='t-b-point' style='left:{{point_Left}}rpx;'></view>
+    </view> -->
+    <!-- <view class="body-view"> -->
+      <slider bindchange="sliderchange" bindchanging="sliderchanging" value="{{daily_Num}}" min="{{slider_Min}}" max="{{slider_Max}}" step="1" block-color="#FF8A4E" color="#D0EBFF" activeColor="#FF8A4E" block-size="20"/>
+    <!-- </view> -->
+    <view class='t-b-scale'>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+      <view class='t-b-scaleLi'></view>
+    </view>
+    <view class='t-b-scalenum'>
+      <text>0℃</text>
+      <text>100℃</text>
+    </view>
+  </view>
+
+  <view class='foot-but'  wx:if="{{!authorize}}">
+    <view class='electricity-but'>
+      <image src='../../image/electricity-w.png'></image>
+      <view class='electricity-show'>
+        <view class='bg-show' style='height:{{electricity}}0%'></view>
+      </view>
+    </view>
+    <button class='open-but' bindtap='save_Record'>开始</button>
+    <view class='bluetooth-but' bindtap='findBluetooth'>
+      <image src='../../image/bluetooth-w.png'></image>
+    </view>
+  </view>
+  <view class='foot-but'  wx:if="{{authorize}}">
+    <view class='electricity-but'>
+      <image src='../../image/electricity.png'></image>
+      <!-- <view class='electricity-show'>
+        <view class='bg-show'></view>
+      </view> -->
+    </view>
+    <button class='open-but' bindtap=''>开始</button>
+    <view class='bluetooth-but' bindtap='findBluetooth'>
+      <image src='../../image/bluetooth.png'></image>
+    </view>
+  </view>
+</view>
+
+
+<button class='authorize' open-type="getUserInfo" bindgetuserinfo='agreeGetUser' wx:if="{{authorize}}"></button>

@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/forgetPassword/forgetPassword",
+    "pages/canvasceshi/canvasceshi",
+    "pages/createBluetooth/createBluetooth",
+    "pages/customer_data/customer_data",
+    "pages/healthIndex/healthIndex",
+    "pages/dataCard/dataCard",
+    "pages/drinkingTarget/drinkingTarget",
+    "pages/waterCircleIndex/waterCircleIndex",
+    "pages/drinkingHistory/drinking_History",
+    "pages/findBluetooth/findBluetooth",
+    "pages/personalIndex/personalIndex",
+    "pages/customer/customer",
+    "pages/logs/logs",
+    "pages/myCup/myCup",
+    "pages/restoreSettings/restoreSettings",
+    "pages/waterFriend/waterFriend",
+    "pages/friend_Requests/friend_Requests",
+    "pages/myPlan/myPlan",
+    "pages/setting/setting",
+    "pages/myProfile/myProfile",
+    "pages/cupMap/cupMap",
+    "pages/addWaterFriend/addWaterFriend",
+    "pages/calendar/calendar",
+    "pages/resetPassword/resetPassword"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "旺科水杯",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#777777",
+    "selectedColor": "#63BDFF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/index-icon.png",
+        "selectedIconPath": "image/index-iconX.png"
+      },
+      {
+        "pagePath": "pages/healthIndex/healthIndex",
+        "text": "健康",
+        "iconPath": "image/health-icon.png",
+        "selectedIconPath": "image/health-iconX.png"
+      },
+      {
+        "pagePath": "pages/waterCircleIndex/waterCircleIndex",
+        "text": "水友圈",
+        "iconPath": "image/waterfriend-icon.png",
+        "selectedIconPath": "image/waterfriend-iconX.png"
+      },
+      {
+        "pagePath": "pages/personalIndex/personalIndex",
+        "text": "个人",
+        "iconPath": "image/my-icon.png",
+        "selectedIconPath": "image/my-iconX.png"
+      }
+    ]
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置将用于水杯断开位置获取"
+    }
+  }
+}

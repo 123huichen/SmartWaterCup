@@ -1,0 +1,6 @@
+<!--pages/customer_data/customer_data.wxml-->
+<view class='main'>
+  <view class='customer-title'>1.{{problem}}</view>
+  <view class='customer-main'>{{program}}</view>
+  <view class='customer-bot'>本文对你是否有帮助？</view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/cupMap/cupMap.wxml-->
+<view class='main'>
+  <view class='map-box'>
+    <map
+      id="map"
+      longitude="{{longitude}}"
+      latitude="{{latitude}}"
+      scale="18"
+      controls="{{controls}}"
+      bindcontroltap="controltap"
+      markers="{{markers}}"
+      bindmarkertap="markertap"
+      polyline="{{polyline}}"
+      bindregionchange="regionchange"
+      show-location
+      style="width: 100%; height: 100%;"
+      enable-3D="{{true}}"
+    ></map>
+  </view>
+  <view class='map-but' wx:if="{{positioning}}" bindtap='positioning_Reminder'>定位提醒</view>
+  <view class='map-but' wx:if="{{navigation}}" bindtap='start_Navigation'>开始导航</view>
+</view>

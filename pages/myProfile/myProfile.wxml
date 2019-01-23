@@ -1,0 +1,24 @@
+<!--pages/myProfile/myProfile.wxml-->
+<view class='main'>
+  <view class='main-form'>
+    <form>
+      <view class='form-li'>
+        <view class='form-text'>年龄</view>
+        <input type='text' class='form-input' value='{{age}}' bindinput='agefun'></input>
+        <view class='form-text1'>岁</view>
+      </view>
+      <view class='form-li'>
+        <view class='form-text'>身高</view>
+        <input type='text' class='form-input' value='{{height}}' bindinput='heightfun'></input>
+        <view class='form-text1'>cm</view>
+      </view>
+      <view class='form-li'>
+        <view class='form-text'>体重</view>
+        <input type='text' class='form-input' value='{{weight}}' bindinput='weightfun'></input>
+        <view class='form-text1'>kg</view>
+      </view>
+      <view class='form-prompt'>提示：修改资料后喝水计划目标会更新哦！</view>
+      <view class='form-submit' bindtap='form_submit'>保存</view>
+    </form>
+  </view>
+</view>

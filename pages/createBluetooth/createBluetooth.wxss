@@ -1,0 +1,62 @@
+/* pages/createBluetooth/createBluetooth.wxss */
+.main{
+  padding: 0rpx 44rpx;
+}
+.Bluetooth-li{
+  display: flex;
+  height: 132rpx;
+  align-items: center;
+}
+.bluetooth-icon{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  overflow: hidden
+}
+.bluetooth-icon > image{
+  width: 100%;
+  height: 100%;
+}
+.bluetooth-name{
+  color: #4A4A4A;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.bluetooth-lj{
+  position: absolute;
+  width: 148rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  right: 44rpx;
+  font-size: 28rpx;
+  color: #63BDFF;
+}
+.bluetooth-input{
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05); 
+  padding: 30rpx 0 10rpx 0;
+  font-size: 32rpx;
+  color: #9B9B9B;
+}
+.map-but{
+  width: 356rpx;
+  height: 76rpx;
+  position: absolute;
+  bottom: 110rpx;
+  left: 50%;
+  margin-left: -178rpx;
+  border-radius: 76rpx;
+  background: #63BDFF;
+  box-shadow:0px 4px 8px rgba(99,189,255,0.45);
+  font-size: 36rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #ffffff;
+}
+
+.forget-password{
+  width: 100%;
+  font-size: 28rpx;
+  color: #BCBBBB;
+  text-align: right;
+  line-height: 80rpx;
+}

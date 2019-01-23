@@ -1,0 +1,69 @@
+<!--pages/healthIndex/healthIndex.wxml-->
+<view class='main' wx:if='{{If_UserInfo}}'>
+  <view class='health-top'>
+    <view class='health-padd'>
+      <!-- <view class='h-t-canvar'>
+        <view class='h-t-text'>
+          <view class='h-t-number'>{{number_H}}</view>
+          
+        </view>
+      </view>  -->
+
+      <view class='progress_box' id='progress_box'>
+          <view class="progress_bg"   canvas-id="canvasProgressbg">  </view> 
+          <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
+          <view class="progress_text">
+              <view class='progress_info'> {{number_H}}%</view>
+              <view style='text-align:center;'>已完成</view>
+          </view>     
+      </view>
+
+
+      <view class='h-t-right'>
+        <view class='h-t-right-top'>
+          <view class=''>今日饮水</view>
+          <view class='h-t-r-t-but' bindtap='myPlan'>
+            <view class='h-but-text'>计划</view>
+            <view class='h-but-icon'><image src='../../image/more-icon-w.png'></image></view>
+          </view>
+        </view>
+        <view class='drink-water'>{{drink_water}}</view>
+        <view class='h-t-right-bot'>
+          <view class='h-t-r-box'>
+            <view class=''>当前温度</view>
+            <view class='h-t-r-b-text'>{{temperature}}℃</view>
+          </view>
+          <view class='h-t-r-box'>
+            <view class=''>每日目标</view>
+            <view class='h-t-r-b-text'>{{aims_water}}ml</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='over-img'>
+    <image src='../../image/over-icon.png'></image>
+    <text class='over-img-text'>今日目标还未完成，请尽力完成它哟。</text>
+  </view>
+  <view class='chart-box'>
+    <view class='chart-title'>
+      <view class=''>最近一周</view>
+      <view class='h-t-r-t-but' bindtap='drinkingHistory'>
+        <view class='h-but-text'>历史</view>
+        <view class='h-but-icon'><image src='../../image/more-icon-w.png'></image></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pie-view">
+    <canvas canvas-id="pieCanvas" disable-scroll="true" class="pieCanvas" style="width:100%; height:240px;"></canvas>
+  </view>
+</view>
+
+
+<view class='zhanweifu-box' wx:if='{{!If_UserInfo}}'>
+  <view class='zhanweifu-img'>
+    <image src='../../image/zhanweifu.png'></image>
+  </view>
+  <view class='zhanweifu-text'>授权后可查看</view>
+</view>

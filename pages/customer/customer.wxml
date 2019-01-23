@@ -1,0 +1,12 @@
+<!--pages/customer/customer.wxml-->
+<view class=''>
+  <view class='customer-list'>
+    <block wx:for-items="{{customer_List}}" wx:key=""> 
+      <view class='customer-li' bindtap='clickproblem' data-problem='{{item.problem}}' data-program='{{item.program}}'>{{index + 1}}{{item.problem}}</view>
+    </block>
+  </view>
+  <view class='customer-bot'>
+    <button class='customer-but customer-but-left'>联系客服</button>
+    <button class='customer-but customer-but-right'>进入公众号</button>
+  </view>
+</view>

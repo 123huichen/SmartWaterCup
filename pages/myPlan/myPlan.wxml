@@ -1,0 +1,50 @@
+<!--pages/myPlan/myPlan.wxml-->
+<view class='main'>
+  <view class='add-bg'>
+    <view class='daily-plan'>
+      <view class='daily-planbox'>
+        <view class='daily-title'>每日计划</view>
+      </view>
+      <view class='daily-num'>{{daily_Num}}ml</view>
+
+      <view class="section section_gap slider-box">
+        <view class="body-view">
+          <slider bindchange="sliderchange" bindchanging="sliderchanging" value="{{daily_Num}}" min="{{slider_Min}}" max="{{slider_Max}}" step="2" block-color="#FF8A4E" color="#D0EBFF" activeColor="#FF8A4E" block-size="20"/>
+        </view>
+        <view class='slider-text'>
+          <text>{{slider_Min}}ml</text>
+          <text>{{slider_Max}}ml</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='daily-time' wx:if="{{whetherBindCup}}">
+    <view class='daily-timeBox'>
+      <view class='daily-time-title'>我的闹钟</view>
+      <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+      <view class='daily-time-but'><image src='../../image/addtime-icon.png'></image></view>
+      </picker>
+      
+    </view>
+    <view class='daily-list'>
+      <block wx:for-items="{{timeList}}" wx:key=""> 
+        <view class='daily-li'>
+          <text>{{item.date}}</text>
+          <text class='delete_text' bindtap='delete_id' data-id='{{item.id}}'>删除</text>
+          <view class="section section_gap">
+            <switch name="switch" bindchange="switchchange" color="#63BDFF" checked="{{item.switching}}" data-id='{{item.id}}'/>
+          </view>
+        </view>
+        <!-- <view class='daily-li'>
+          <text>07:30</text>
+          <view class="section section_gap">
+            <switch name="switch" color="#63BDFF" />
+          </view>
+        </view> -->
+      </block>
+    </view>
+  </view>
+
+  <view class='map-but' bindtap='requestFun'>保存</view>
+</view>

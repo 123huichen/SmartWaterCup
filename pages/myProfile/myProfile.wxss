@@ -1,0 +1,57 @@
+/* pages/myProfile/myProfile.wxss */
+.main{
+  width: 100%;
+  height: 100vh;
+  position: relative
+}
+.main-form{
+  padding: 0rpx 44rpx;
+}
+.form-li{
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.form-text{
+  font-size: 32rpx;
+  color: #4A4A4A;
+}
+.form-text1{
+  font-size: 32rpx;
+  color: #4A4A4A;
+  width: 60rpx
+}
+.form-input{
+  height: 90rpx;
+  font-size: 32rpx;
+  color: #4A4A4A;
+  text-align: right;
+  position: absolute;
+  right: 110rpx;
+} 
+.form-prompt{
+  color: #63BDFF;
+  line-height: 90rpx;
+  font-size: 28rpx
+}
+.form-submit::after{
+  border: none
+}
+.form-submit{
+  width: 356rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  background: #63BDFF;
+  box-shadow:0px 4px 8px rgba(99,189,255,0.45);
+  border-radius: 38rpx;
+  color: #fff;
+  font-size: 36rpx;
+  position: absolute;
+  bottom: 90rpx;
+  left: 50%;
+  margin-left: -178rpx;
+  text-align: center
+}

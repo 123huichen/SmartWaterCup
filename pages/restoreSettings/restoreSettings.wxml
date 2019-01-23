@@ -1,0 +1,14 @@
+<!--pages/restoreSettings/restoreSettings.wxml-->
+<view class='mycup-list'>
+  <view class='mycup-box'>
+    <view class='mycup-li' style='background:{{mycup_color}}'>
+      <view class='mycup-img'><image src='../../image/mycup-icon.png'></image></view>
+      <view class='mycupshadow-img'><image src='../../image/mycupshon-icon.png'></image></view>
+      <text class='cup-Numbering'>{{cup_Numbering}}</text>
+      <text class='cup-name'>{{cup_name}}</text>
+    </view>
+    <view class='back-view' style='box-shadow:10rpx 2rpx 50rpx {{mycup_color}}'></view>
+  </view>
+  <button class='setting-but' bindtap='reply_Settings'>恢复出厂设置</button>
+</view>
+

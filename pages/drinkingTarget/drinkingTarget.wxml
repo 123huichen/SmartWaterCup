@@ -1,0 +1,11 @@
+<!--pages/drinkingTarget/drinkingTarget.wxml-->
+<view class='card-box'>
+  <view class='card-center'>
+    <view class='card-ML'>{{card_ML}}ml</view>
+    <view class='card-prompt'>每天完成规定目标，能保持身体健康哦！</view>
+    <view class='card-bot'>
+      <button class='card-but' bindtap='myPlan'>修改</button>
+      <button class='card-but card-butRight' bindtap='confirm_index'>确认</button>
+    </view>
+  </view>
+</view>

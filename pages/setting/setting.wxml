@@ -1,0 +1,100 @@
+<!--pages/setting/setting.wxml-->
+<view class='main'>
+
+  <view class='daily-list'>
+    <view class='daily-title'>防烫提醒</view>
+    <view class='daily-li'>
+      <text>声音提醒</text> 
+      <view class="section section_gap">
+        <switch name="switch" bindchange="antiScaldSoundchange" color="#63BDFF" checked='{{antiScaldSound}}'/>
+      </view>
+    </view> 
+  </view>  
+  <view class='daily-list'>
+    <view class='daily-title'>清洗提醒</view>
+    <view class='daily-li'>
+      <text>声音提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="clearShockchange" color="#63BDFF" checked='{{clearShock}}'/>
+      </view>
+    </view> 
+    <view class='daily-li'>
+      <text>震动提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="clearSoundchange" color="#63BDFF" checked='{{clearSound}}'/>
+      </view>
+    </view>
+  </view>
+  <view class='daily-list'>
+    <view class='daily-title'>喝水提醒</view>
+    <view class='daily-li'>
+      <text>声音提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="drinkShockchange" color="#63BDFF" checked='{{drinkShock}}'/>
+      </view>
+    </view>
+    <view class='daily-li'>
+      <text>震动提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="drinkSoundchange" color="#63BDFF" checked='{{drinkSound}}'/>
+      </view>
+    </view>
+  </view>
+  <view class='daily-list'>
+    <view class='daily-title'>电量提醒</view>
+    <view class='daily-li'>
+      <text>声音提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="electricityShockchange" color="#63BDFF" checked='{{electricityShock}}'/>
+      </view>
+    </view>
+    <view class='daily-li'>
+      <text>震动提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="electricitySoundchange" color="#63BDFF" checked='{{electricitySound}}'/>
+      </view>
+    </view>
+  </view>
+  <view class='daily-list'>
+    <view class='daily-title'>好友提醒</view>
+    <view class='daily-li'>
+      <text>声音提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="friendShockchange" color="#63BDFF" checked='{{friendShock}}'/>
+      </view>
+    </view>
+    <view class='daily-li'>
+      <text>震动提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="friendSoundchange" color="#63BDFF" checked='{{friendSound}}'/>
+      </view>
+    </view>
+  </view>
+  <view class='daily-list'>
+    <view class='daily-title'>防丢失功能</view>
+    <view class='daily-li'>
+      <text>防丢失功能</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="lossPreventionchange" color="#63BDFF" checked='{{lossPrevention}}'/>
+      </view>
+    </view>
+  </view>
+  <view class='daily-list'>
+    <view class='daily-title'>水温提醒</view>
+    <view class='daily-li'>
+      <text>声音提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="temperatureShockchange" color="#63BDFF" checked='{{temperatureShock}}'/>
+      </view>
+    </view>
+    <view class='daily-li'>
+      <text>震动提醒</text>
+      <view class="section section_gap">
+        <switch name="switch" bindchange="temperatureSoundchange" color="#63BDFF" checked='{{temperatureSound}}'/>
+      </view>
+    </view>
+  </view>
+
+  <view class='map-but' bindtap='requestFun'>保存</view>
+</view>
+

@@ -1,0 +1,23 @@
+<!--pages/findBluetooth/findBluetooth.wxml-->
+<view class='' wx:if='{{souso}}'>
+  <view class='circle'>
+    <view class="blue-c1"><image src='../../image/blue-find-icon.png'></image></view>
+    <view class="blue-c2"></view>
+    <view class="blue-c3"></view>
+    <view class="blue-c4"></view>
+  </view>
+  <button class='blue-but' bindtap='startBluetoothDevicesDiscovery'>开始查找</button>
+</view>
+
+
+<view class='main' wx:if='Bluetoothshow'>
+  <block wx:for-items="{{Bluetooth_list}}" wx:key=""> 
+    <view class='Bluetooth-li'>
+      <view class='bluetooth-icon'><image src='../../image/mycupicon.png'></image></view>
+      <view class='bluetooth-name'>{{item.localName}}</view>
+      <view class='bluetooth-lj' bindtap='bluetooth_Lianjie' data-deviceId='{{item.deviceId}}' data-localName='{{item.localName}}' data-cupDeviceNo='{{item.cupDeviceNo}}'>
+        <view class='bluetooth-lj-icon' ><image src='../../image/lianjie.png'></image></view>
+      </view>
+    </view>
+  </block>  
+</view>
