@@ -6,7 +6,7 @@
     </block>
   </view>
   <view class='customer-bot'>
-    <button class='customer-but customer-but-left'>联系客服</button>
-    <button class='customer-but customer-but-right'>进入公众号</button>
+    <button open-type="contact" class='customer-but customer-but-left' bindcontact="handleContact">联系客服</button>
+    <button open-type="contact" class='customer-but customer-but-right' bindcontact="handleContact">进入公众号</button>
   </view>
 </view>
