@@ -50,7 +50,6 @@ Page({
         }
       },
       fail: function (res) {
-        //异常处理
         app.httpError(res.message)
       },
       urlname: api.POST_add

@@ -93,7 +93,7 @@ Page({
     } else if (that.data.gender == "女") {
       genderData = 1;
     }
-    network.POST({
+    network.POST({ 
       params: {
         id: app.globalData.uid,
         name: app.globalData.userInfo.nickName,

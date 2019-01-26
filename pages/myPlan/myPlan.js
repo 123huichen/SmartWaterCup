@@ -25,6 +25,12 @@ Page({
   onLoad: function (options) {
     console.log();
     const that = this;
+    if (options.drinkEnd){
+      that.setData({
+        slider_Min: drinkStart,
+        slider_Max: drinkEnd,
+      })
+    }
     if (app.globalData.whetherBindCup){
       that.setData({
         whetherBindCup:true

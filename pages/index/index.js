@@ -36,7 +36,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const that = this
+    const that = this;
+    app.globalData.sysinfo = wx.getSystemInfoSync()
+    console.log('app.getSystem()=================>' + app.getSystem())
+
     if (app.globalData.userInfo) {
       that.setData({
         authorize: app.globalData.authorize,
@@ -290,7 +293,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+ 
   },
 
   /**

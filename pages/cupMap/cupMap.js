@@ -69,10 +69,13 @@ Page({
   onLoad: function (options) {
     const that = this;
     that.mapCtx = wx.createMapContext('map');
-    that.setData({
-      positioning: app.globalData.positioning_reminder,
-      navigation: false,
-    })
+    if (app.globalData.positioning_reminder){
+      that.setData({
+        positioning: app.globalData.positioning_reminder,
+        navigation: false,
+      })
+    }
+    
     
     wx.getLocation({
       type: 'gcj02', // 返回可以用于wx.openLocation的经纬度

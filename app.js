@@ -50,7 +50,7 @@ App({
       }
     })
 
-    this.globalData.sysinfo = wx.getSystemInfoSync()
+    
 
     //打开蓝牙适配器
     wx.openBluetoothAdapter({
@@ -61,10 +61,22 @@ App({
         console.log(res)
         if (res.errCode == 10001){
           that.globalData.bluetootIfshow = false;
-          wx.showToast({
-            title: '请打开手机蓝牙',
-            icon: `none`,
-            duration: 2000
+          // wx.showToast({
+          //   title: '请打开手机蓝牙',
+          //   icon: `none`,
+          //   duration: 2000
+          // })
+
+          wx.showModal({
+            title: '提示',
+            content: '请打开蓝牙',
+            success(res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
           })
         }
       },
@@ -77,12 +89,15 @@ App({
         console.log(res)
       }
     })
-
+                
     wx.onBluetoothAdapterStateChange(function (res) {
       console.log(`adapterState changed, now is===========`, res)
       if (res.available && that.globalData.bluetootIfshow == false && that.globalData.deviceId){
         that.globalData.bluetootIfshow = true;
         that.bluetoot_Connection()
+      }
+      if (res.available == false){
+        that.globalData.bluetootIfshow = false;
       }
     })
     
@@ -109,40 +124,12 @@ App({
 
       var resData = blue_Com.buf2hex(res.value);
       console.log(blue_Com.hexCharCodeToStr(resData));
-      if (operating_code == blue_Com.command_data.WC.CONFIRM_PASSWORD) {
+      if (operating_code == blue_Com.command_data.WC.CONFIRM_PASSWORD) { 
         that.globalData.positioning_reminder = true;
 
-        // const currentTime = that.getNowFormatDate();
-        // console.log(currentTime)
-        // var buffer1 = blue_Com.getPacket(blue_Com.command_data.WX.INTERNET_TIME, currentTime) //发送互联网时间给水杯
-        // console.log('buffer1--------------' + buffer1)
-        // var typedArray = new Uint8Array(buffer1.match(/[\da-f]{2}/gi).map(function (h) {
-        //   return parseInt(h, 16)
-        // }))
-
-        // var buffer = typedArray.buffer
-        // console.log(buffer)
-
-        // wx.writeBLECharacteristicValue({
-        //   deviceId: that.globalData.deviceId,
-        //   serviceId: that.globalData.serviceId,
-        //   characteristicId: that.globalData.cd02,
-        //   value: buffer,
-        //   success: function (res) {
-        //     console.log("success  设置密码成功");
-        //     console.log(res);
-        //   },
-        //   fail: function (res) {
-        //     console.log(res);
-        //   },
-        //   complete: function (res) {
-        //     console.log(res);
-        //   }
-        // })
-      }
-      if (operating_code == blue_Com.command_data.WC.DEVICENO) { //链接蓝牙成功
-
-        var buffer1 = blue_Com.getPacket(blue_Com.command_data.WX.CHANGE_PASSWORD, that.data.settingpassword_data)
+        const currentTime = that.getNowFormatDate();
+        console.log(currentTime)
+        var buffer1 = blue_Com.getPacket(blue_Com.command_data.WX.INTERNET_TIME, currentTime) //发送互联网时间给水杯
         console.log('buffer1--------------' + buffer1)
         var typedArray = new Uint8Array(buffer1.match(/[\da-f]{2}/gi).map(function (h) {
           return parseInt(h, 16)
@@ -167,9 +154,37 @@ App({
             console.log(res);
           }
         })
+      }
+      if (operating_code == blue_Com.command_data.WC.DEVICENO) { //链接蓝牙成功
+
+        var buffer1 = blue_Com.getPacket(blue_Com.command_data.WX.CHANGE_PASSWORD, that.data.settingpassword_data)
+        console.log('buffer1--------------' + buffer1)
+        var typedArray = new Uint8Array(buffer1.match(/[\da-f]{2}/gi).map(function (h) {
+          return parseInt(h, 16)
+        }))
+
+        var buffer = typedArray.buffer
+        console.log(buffer)
+
+        wx.writeBLECharacteristicValue({
+          deviceId: that.globalData.deviceId,
+          serviceId: that.globalData.serviceId,
+          characteristicId: that.globalData.cd02,
+          value: buffer,
+          success: function (res) {
+            console.log("success  设置密码成功");
+            console.log(res);
+          },       
+          fail: function (res) {
+            console.log(res);
+          },
+          complete: function (res) {
+            console.log(res); 
+          }
+        })
 
       }
-      if (operating_code == blue_Com.command_data.WC.SET_PASSWORD) {
+      if (operating_code == blue_Com.command_data.WC.SET_PASSWORD) { //设置密码完
         console.log('蓝牙链接成功')
         wx.showToast({
           title: '蓝牙已链接',
@@ -177,7 +192,7 @@ App({
           duration: 2000
         })
       }
-      if (operating_code == blue_Com.command_data.WC.PASSWORD_INCORRECT) {
+      if (operating_code == blue_Com.command_data.WC.PASSWORD_INCORRECT) { //密码错误
         wx.showToast({
           title: '密码错误',
           icon: `none`,
@@ -282,7 +297,7 @@ App({
           },
           success: function (res) {
             if (res.data.code == 200) {
-              console.log('保存烧水记录')
+              console.log('保存烧水记录') 
               console.log(res.data.data)
             } else {
               //异常处理
@@ -310,12 +325,11 @@ App({
             if (res.data.code == 200) {
               console.log('水杯状态更新')
               console.log(res.data.data)
-
             } else {
               that.httpError(res.data.message)
             }
           },
-          fail: function (res) {
+          fail: function (res) { 
             that.httpError(res.message)
           },
           urlname: api.POST_monitor
@@ -552,7 +566,7 @@ App({
     
   },
 
-  //蓝牙连接
+  //蓝牙连接 
   bluetoot_Connection: function(){
     const that = this;
     wx.createBLEConnection({ //链接已链接过的蓝牙设备
@@ -659,6 +673,14 @@ App({
             }, 1500)
           }
         })
+      },
+      fail(res){
+        console.log(res.errCode)
+        if (res.errCode == 10013){
+          wx.navigateTo({
+            url: `../createBluetooth/createBluetooth?localName=${that.globalData.bluetoothName}&deviceId=${that.globalData.deviceId}&cupDeviceNo=${that.globalData.deviceId}`
+          })
+        }
       }
     })
   },

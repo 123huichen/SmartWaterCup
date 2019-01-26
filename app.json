@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/forgetPassword/forgetPassword",
-    "pages/canvasceshi/canvasceshi",
     "pages/createBluetooth/createBluetooth",
     "pages/customer_data/customer_data",
     "pages/healthIndex/healthIndex",
