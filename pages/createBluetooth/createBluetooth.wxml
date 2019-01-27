@@ -10,12 +10,12 @@
   </view> 
 
   <view class='bluetooth-input-box' wx:if="{{first_password}}">
-    <input class='bluetooth-input' type='text' placeholder='{{set_password}}' bindinput='settingpassword'></input>
-    <input class='bluetooth-input' type='text' placeholder='{{confirm_password}}' bindinput="confirmpassword"></input>
+    <input class='bluetooth-input' password='{{true}}' type='text' placeholder='{{set_password}}' bindinput='settingpassword'></input>
+    <input class='bluetooth-input' password='{{true}}' type='text' placeholder='{{confirm_password}}' bindinput="confirmpassword"></input>
   </view>
 
   <view class='bluetooth-input-box' wx:if="{{second_password}}">
-    <input class='bluetooth-input' type='text' placeholder='请输入密码' bindinput='settingpassword'></input>
+    <input class='bluetooth-input' password='{{true}}' type='text' placeholder='请输入密码' bindinput='settingpassword'></input>
     <view class='forget-password'><text bindtap='forget_Password'>忘记密码？</text></view>
   </view>
 
